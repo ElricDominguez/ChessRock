@@ -1,0 +1,547 @@
+:root{
+  --green:#00603B;
+  --green-dark:#004B2E;
+  --gold:#D3B36A;
+  --ink:#1f1f1f;
+  --shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  padding:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--ink);
+  background:#fff;
+}
+img{max-width:100%;display:block}
+
+.container{width:min(1100px,92%);margin:auto}
+
+/* ===========================
+   HEADER
+   =========================== */
+.site-header{
+  background:var(--green);
+  border-bottom:8px solid var(--gold);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:8px 0;
+}
+.brand{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:4px;
+  line-height:1;
+  text-decoration:none;
+}
+.logo-hand{height:48px}
+.logo-title{height:28px;margin-top:2px}
+
+.main-nav{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+.nav-link{
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:.2px;
+  padding:6px 0;
+  opacity:.98;
+}
+.nav-link:hover{opacity:1}
+.nav-link.active{
+  border-bottom:2px solid var(--gold);
+  padding-bottom:4px;
+}
+.nav-link.cta{
+  background:var(--gold);
+  color:#083;
+  border-radius:8px;
+  padding:10px 10px;
+  line-height:1.05;
+  text-align:center;
+  min-width:70px;
+}
+.nav-link.cta span{display:block}
+.nav-toggle{
+  display:none;
+  margin-left:auto;
+  font-size:24px;
+  background:transparent;
+  border:0;
+  color:#fff;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero{
+  position:relative;
+  min-height:40vh;
+}
+.hero-img{
+  width:100%;
+  height:58vh;
+  object-fit:cover;
+  filter:brightness(.86);
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+.hero h1{
+  margin:0 0 8px;
+  font-size:34px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-shadow:0 2px 12px rgba(0,0,0,.55);
+}
+.hero p{
+  max-width:820px;
+  margin:6px 0 8px;
+  font-weight:600;
+}
+.hero .quote{opacity:.95;margin-top:4px}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  border-radius:10px;
+  padding:10px 16px;
+  font-weight:800;
+  box-shadow:var(--shadow);
+}
+.btn-primary{
+  background:var(--gold);
+  color:#083;
+}
+.btn-primary:hover{filter:brightness(.95)}
+.btn-ghost{
+  border:2px solid var(--green-dark);
+  color:var(--green-dark);
+  padding:8px 12px;
+}
+.btn-ghost:hover{
+  background:var(--green-dark);
+  color:#fff;
+}
+
+/* ===========================
+   DUO TILES (ChessPieces background)
+   =========================== */
+.duo-tiles{
+  background-image:url("../Images/ChessPieces.png");
+  background-repeat:repeat;
+  background-size:220px;
+  padding:28px 0;
+}
+.duo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+.duo-card{
+  background:#fff;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  padding-bottom:12px;
+  transition:transform .2s ease;
+}
+.duo-card:hover{transform:translateY(-4px)}
+.duo-card h3{margin:10px 14px}
+.duo-card .btn{margin:0 14px 12px}
+
+/* ===========================
+   SINGLE WIDE IMAGE
+   =========================== */
+.single-hero{
+  margin:26px auto;
+}
+.single-hero img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+/* ===========================
+   VIDEO ROW (knight background)
+   =========================== */
+.video-row{
+  background-image:url("../Images/knight-background.png");
+  background-repeat:no-repeat;
+  background-size:cover;        /* makes image fill instead of tile */
+  background-position:center;
+  padding:60px 0;
+  margin-top:4px;
+}
+.video-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:26px;
+  align-items:center;
+}
+.video-text{
+  color:#fff;
+  text-shadow:0 1px 2px rgba(0,0,0,.35);
+}
+.video-text h2{
+  margin:0 0 8px;
+  font-size:26px;
+  font-weight:800;
+}
+.video-text p{
+  margin:0 0 14px;
+  font-weight:500;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.site-footer{
+  background:var(--green);
+  color:#fff;
+  margin-top:34px;
+  padding-top:16px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.footer-col p,
+.footer-col a{
+  color:#fff;
+  margin:0;
+}
+.socials{display:flex;gap:12px}
+.socials img{width:28px;height:28px}
+.copyright{
+  text-align:center;
+  margin:18px 0 0;
+  padding-bottom:18px;
+  border-top:1px solid rgba(255,255,255,.25);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width:920px){
+  .duo-grid{grid-template-columns:1fr}
+  .video-grid{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .main-nav{
+    position:absolute;
+    right:0;
+    top:60px;
+    background:var(--green);
+    flex-direction:column;
+    padding:10px;
+    display:none;
+  }
+  .main-nav.open{display:flex}
+  .nav-toggle{display:block}
+  .logo-hand{height:44px}
+  .logo-title{height:24px}
+}
+
+/* ===========================
+   ABOUT PAGE
+   =========================== */
+
+/* Big background image area behind the gold card */
+.about-hero{
+  /* Set your preferred hero background here */
+  background-image:url("../Images/DudePokingHisNose.jpg"); /* or another hero image */
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  padding:42px 0;        /* outer spacing around the gold card */
+}
+
+/* Gold content card in the hero */
+.about-card{
+  background:#D3B36A;          /* gold */
+  color:#fff;                  /* white text for contrast */
+  border-radius:14px;
+  box-shadow:0 14px 40px rgba(0,0,0,.18);
+  padding:26px 28px;
+  width:min(760px, 100%);
+  margin:auto;                 /* center it */
+}
+
+/* Title inside the gold card */
+.about-card h1{
+  text-align:center;
+  margin:0 0 12px;
+  letter-spacing:1px;
+  font-size:28px;
+  font-weight:900;
+}
+
+/* Ordered list styling */
+.about-list{
+  margin:0;
+  padding-left:18px;           /* keep list numbers neat */
+}
+.about-list > li{
+  margin:12px 0 16px;
+}
+.about-list h3{
+  margin:0 0 6px;
+  font-size:18px;
+  color:#fff;
+}
+.about-list p{
+  margin:0;
+  line-height:1.45;
+  color:#fff;
+}
+
+/* BIO section with green card */
+.bio-wrap{
+  background:#eaeaea;          /* subtle page break behind the green card */
+  padding:34px 0;
+}
+.bio-card{
+  background:#00603B;          /* brand green */
+  color:#fff;
+  border-radius:14px;
+  box-shadow:0 14px 40px rgba(0,0,0,.18);
+  padding:24px 24px 10px;
+  width:min(760px, 100%);
+  margin:auto;
+  position:relative;
+}
+.bio-card h2{
+  text-align:center;
+  margin:6px 0 12px;
+  font-weight:800;
+}
+.bio-card p{ margin:10px 0; line-height:1.55 }
+
+/* Portrait anchored to bottom with light inset space */
+.bio-photo{
+  margin:14px 0 0;
+}
+.bio-photo img{
+  width:50%;
+  height:auto;
+  border-radius:10px;
+  box-shadow:0 10px 26px rgba(0,0,0,.18);
+	align-content: center;
+	
+}
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  .about-card{ padding:20px 18px }
+  .bio-card{ padding:20px 18px 10px }
+  .about-card h1{ font-size:24px }
+}
+
+/* ===========================
+   MEETINGS PAGE
+   =========================== */
+
+/* Title band */
+.meetings-hero{
+  background:#00603B;
+  background-image:url("../Images/knight-background.png");
+  background-size:120px;
+  background-repeat:repeat;
+  border-bottom:8px solid var(--gold);
+  color:#fff;
+  padding:16px 0 10px;
+}
+.meetings-hero h1{
+  margin:0;
+  color:#fff;
+  text-shadow:0 1px 6px rgba(0,0,0,.35);
+}
+
+/* Responsive map */
+.map-wrap{
+  margin:16px 0 10px;
+  width:100%;
+  aspect-ratio: 16 / 9;           /* keeps maps proportional */
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.gmap{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* Gold info banners */
+.meet-info{
+  background:var(--gold);
+  color:#fff;
+  border-radius:10px;
+  padding:14px 18px;
+  margin:12px auto 24px;
+  width:min(820px, 100%);
+  box-shadow:var(--shadow);
+  text-align:center;
+  font-weight:700;
+}
+.meet-info p{margin:6px 0}
+.meet-links .btn{box-shadow:none}
+
+/* Chess-piece band holding a centered card */
+.piece-band{
+  background-image:url("../Images/ChessPieces.png");
+  background-repeat:repeat;
+  background-size:220px;
+  padding:18px 0;
+  border-radius:12px;
+  margin:8px 0 18px;
+}
+
+/* Tournaments */
+.tournaments-wrap{
+  background:#efe9dd;
+  padding:22px 0 36px;
+}
+.tournaments-wrap h2{
+  color:#333;
+  text-align:center;
+  margin:4px 0 16px;
+  text-shadow:0 1px 0 rgba(255,255,255,.6);
+}
+.tournament-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.t-card{
+  display:block;
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.t-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 36px rgba(0,0,0,.22);
+}
+.t-card img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+@media (max-width:820px){
+  .tournament-grid{grid-template-columns:1fr}
+}
+/* ===========================
+   TUTORS PAGE
+   =========================== */
+
+.tutors-hero {
+  background-image: url("../Images/Rook-Background.png");
+  background-repeat: repeat;
+  background-size: 300px;
+  padding: 30px 0 60px;
+  color: #fff;
+  text-align: center;
+}
+
+.tutors-hero h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.tutor-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.tutor-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #D3B36A;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tutor-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.tutor-text {
+  flex: 1;
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tutor-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.tutor-text p {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.tutor-img {
+  flex: 1;
+  text-align: center;
+}
+
+.tutor-img img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  .tutor-card, .tutor-card.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tutor-text {
+    text-align: center;
+  }
+}
+

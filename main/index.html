@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chess Rock Academy – Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Facebook SDK for embedded video -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"
+    nonce="chessrock"></script>
+</head>
+
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Chess Rock Home">
+        <img class="logo-hand" src="Images/rock-hand-icon.png" alt="Chess Rock hand icon" />
+        <img class="logo-title" src="Images/ChessRockTitle.png" alt="Chess Rock title" />
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <nav id="mainNav" class="main-nav" aria-label="Primary">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        <a class="nav-link" href="tutors.html">Our Tutors</a>
+        <a class="nav-link" href="meetings.html">Meetings/Tournaments</a>
+        <a class="nav-link cta" href="contact.html"><span>Contact<br>us</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="Images/Shakes.jpg" alt="Students playing chess at Chess Rock" class="hero-img" />
+    <div class="hero-overlay">
+      <h1>WELCOME</h1>
+      <p>Here at Chess Rock we see chess not only as a game of the intellect,
+         but as a tool for discipline. We are open to all ages.</p>
+      <p class="quote">“The most helpful thing I learnt from chess is to make good decisions
+         on incomplete data in a limited amount of time.” — Magnus Carlsen</p>
+      <a class="btn btn-primary" href="meetings.html">View Meetings</a>
+    </div>
+  </section>
+
+  <!-- Duo tiles on ChessPieces background -->
+  <section class="duo-tiles">
+    <div class="container duo-grid">
+      <article class="duo-card">
+        <img src="Images/gameroom.jpg" alt="Weekly meeting room">
+        <h3>Weekly Meeting</h3>
+        <a class="btn btn-ghost" href="meetings.html#weekly">Go to Meetings</a>
+      </article>
+
+      <article class="duo-card">
+        <img src="Images/Tamiu Event.jpg" alt="Chess tournament poster">
+        <h3>Tournaments</h3>
+        <a class="btn btn-ghost" href="meetings.html#tournaments">See Tournaments</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Lone Gameroom image (full width inside page gutters) -->
+  <section class="single-hero container">
+    <img src="Images/gameroom.jpg" alt="Players in the Chess Rock game room">
+  </section>
+
+  <!-- Video row on knight background (text + button left, video right) -->
+  <section class="video-row">
+    <div class="container video-grid">
+      <div class="video-text">
+        <h2>Private Lessons &amp; Free Lessons on Saturdays!</h2>
+        <p>Beginner-friendly coaching with patient tutors who love teaching kids.</p>
+        <a class="btn btn-primary" href="tutors.html">Tutors</a>
+      </div>
+
+      <div class="video-embed">
+        <div class="fb-video"
+             data-href="https://www.facebook.com/watch/?v=822613160288124"
+             data-width="560"
+             data-allowfullscreen="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Follow Our Socials</h4>
+        <p class="socials">
+          <a href="https://www.facebook.com/laredochess/" target="_blank" rel="noopener">
+            <img src="Images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/laredochessrock/" target="_blank" rel="noopener">
+            <img src="Images/instagram-icon.png" alt="Instagram" />
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p><a href="mailto:ChessRockAcademy@gmail.com">ChessRockAcademy@gmail.com</a><br/>
+           (956) 629-0242</p>
+      </div>
+      <div class="footer-col">
+        <p>5810 Santa Maria Ave Ste. 204,<br/>Laredo, TX, United States, Texas</p>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Chess Rock Academy</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

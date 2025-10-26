@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meetings & Tournaments – Chess Rock Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header (same as other pages) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Chess Rock Home">
+        <img class="logo-hand" src="Images/rock-hand-icon.png" alt="Chess Rock hand icon" />
+        <img class="logo-title" src="Images/ChessRockTitle.png" alt="Chess Rock title" />
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <nav id="mainNav" class="main-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        <a class="nav-link" href="tutors.html">Our Tutors</a>
+        <a class="nav-link active" href="meetings.html">Meetings/Tournaments</a>
+        <a class="nav-link cta" href="contact.html"><span>Contact<br>us</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page title on knight pattern -->
+  <section class="meetings-hero">
+    <div class="container">
+      <h1>Meetings</h1>
+    </div>
+  </section>
+
+  <!-- ===== Location #1: Chess Rock Academy ===== -->
+  <section class="container">
+    <div class="map-wrap">
+      <!-- Live Google Map (no API key) -->
+      <iframe
+        class="gmap"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=5810%20Santa%20Maria%20Ave%20Ste.%20204%2C%20Laredo%2C%20TX%2078041&output=embed">
+      </iframe>
+    </div>
+
+    <!-- Gold info banner -->
+    <div class="meet-info">
+      <p>
+        <strong>5810 Santa Maria Ave Ste. 204,<br> Laredo, TX, United States, Texas</strong><br>
+        <span>FRIDAYS – 5:30 PM to 8:30 PM</span><br>
+        <span>$5 Fee</span>
+      </p>
+      <p class="meet-links">
+        <a class="btn btn-primary" target="_blank"
+           href="https://www.google.com/maps/dir/?api=1&destination=5810+Santa+Maria+Ave+Ste.+204,+Laredo,+TX+78041">
+          Get Directions
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Location #2: Joe A. Guerra Library ===== -->
+  <section class="container">
+    <div class="map-wrap">
+      <iframe
+        class="gmap"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Joe%20A.%20Guerra%20Laredo%20Public%20Library%2C%20Laredo%2C%20TX&output=embed">
+      </iframe>
+    </div>
+
+    <!-- chess-piece band with centered gold card -->
+    <div class="piece-band">
+      <div class="meet-info">
+        <p>
+          <strong>Joe A. Guerra Laredo Public Library</strong><br>
+          <span>11:00 AM to 1:00 PM — FREE</span>
+        </p>
+        <p class="meet-links">
+          <a class="btn btn-primary" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&destination=Joe+A.+Guerra+Laredo+Public+Library">
+            Get Directions
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Tournaments ===== -->
+  <section id="tournaments" class="tournaments-wrap">
+    <div class="container">
+      <h2>Tournaments</h2>
+
+      <!-- Your flyer images; replace filenames as needed -->
+      <div class="tournament-grid">
+        <a href="Images/Tamiu Event.jpg" target="_blank" class="t-card">
+          <img src="Images/Tamiu Event.jpg" alt="TAMIU Chess Tournament poster" />
+        </a>
+
+        <a href="Images/friday night event.jpg" target="_blank" class="t-card">
+          <img src="Images/friday night event.jpg" alt="Underground Friday Knight Blitz poster" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Follow Our Socials</h4>
+        <p class="socials">
+          <a href="https://www.facebook.com/laredochess/" target="_blank" rel="noopener">
+            <img src="Images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/laredochessrock/" target="_blank" rel="noopener">
+            <img src="Images/instagram-icon.png" alt="Instagram" />
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p><a href="mailto:ChessRockAcademy@gmail.com">ChessRockAcademy@gmail.com</a><br/>
+           (956) 629-0242</p>
+      </div>
+      <div class="footer-col">
+        <p>5810 Santa Maria Ave Ste. 204,<br/>Laredo, TX, United States, Texas</p>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Chess Rock Academy</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
